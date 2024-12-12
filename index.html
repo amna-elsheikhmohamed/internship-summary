@@ -8,18 +8,18 @@
         /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f1f1f1; /* Light gray background */
+            background-color: #f7f7f7; /* Light gray background */
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         h1, h2 {
-            color: #6a0dad; /* Purple */
+            color: #5a2d82; /* Deep purple */
         }
 
         a {
-            color: #6a0dad;
+            color: #5a2d82;
             text-decoration: none;
         }
 
@@ -29,7 +29,7 @@
 
         /* Header */
         header {
-            background-color: #6a0dad;
+            background-color: #5a2d82;
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -39,13 +39,14 @@
         header h1 {
             font-size: 3rem;
             margin: 0;
+            font-family: 'Georgia', serif;
         }
 
         /* Navigation */
         nav {
-            background-color: #3f1f6b;
+            background-color: #3e1f56;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -53,14 +54,15 @@
 
         nav a {
             color: white;
-            font-size: 1.2rem;
-            margin: 0 15px;
-            padding: 10px 20px;
+            font-size: 1.1rem;
+            margin: 0 20px;
+            padding: 12px 20px;
             transition: background-color 0.3s ease;
+            font-family: 'Arial', sans-serif;
         }
 
         nav a:hover {
-            background-color: #6a0dad;
+            background-color: #5a2d82;
             border-radius: 5px;
         }
 
@@ -83,6 +85,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             text-align: center;
+            font-family: 'Georgia', serif;
         }
 
         .week-section ul {
@@ -104,16 +107,39 @@
         }
 
         .tools-section img {
-            height: 60px;
+            height: 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer */
         footer {
-            background-color: #6a0dad;
+            background-color: #5a2d82;
             color: white;
             padding: 20px 0;
             text-align: center;
             font-size: 1rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Art and Museum Theme */
+        .artwork-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .artwork-gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .artwork-gallery img {
+            max-width: 45%;
+            border-radius: 10px;
         }
 
         /* Media Queries for Responsiveness */
@@ -138,6 +164,16 @@
             }
 
             .tools-section img {
+                margin-bottom: 20px;
+            }
+
+            .artwork-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .artwork-gallery img {
+                max-width: 80%;
                 margin-bottom: 20px;
             }
         }
@@ -173,6 +209,10 @@
             <li>Learned data cleaning and sorting techniques in Power BI.</li>
             <li>Discovered how silence visualization enhances graphics interactivity.</li>
         </ul>
+        <div class="artwork-gallery">
+            <img src="https://images.unsplash.com/photo-1579834296222-c9ed947ee401" alt="Museum Artwork 1">
+            <img src="https://images.unsplash.com/photo-1534920561891-fd8d73f2f4f4" alt="Museum Artwork 2">
+        </div>
     </div>
 
     <div id="week2" class="week-section">
@@ -190,10 +230,10 @@
         </ul>
         <div class="tools-section">
             <a href="https://github.com/your-username" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Markdown-mark.svg/600px-Markdown-mark.svg.png" alt="GitHub logo">
             </a>
-            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel logo">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Excel_Icon.png/1024px-Excel_Icon.png" alt="Excel logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Power_BI_Logo_2020.svg/2560px-Power_BI_Logo_2020.svg.png" alt="Power BI logo">
         </div>
     </div>
 
