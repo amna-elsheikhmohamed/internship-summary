@@ -17,7 +17,7 @@ body {
   background: linear-gradient(145deg, #660066, #6a3c8b); /* Gradient with purple and dark purple */
   color: #fff;
   line-height: 1.6;
-  padding: 30px 12px;  /* Reduced padding */
+  padding: 30px 12px; /* Reduced padding */
   min-height: 100vh;
   font-size: 1rem; /* Slightly smaller font size */
 }
@@ -40,7 +40,7 @@ header:hover {
 }
 
 header h1 {
-  font-size: 2.5rem;  /* Slightly smaller font size */
+  font-size: 2.5rem; /* Slightly smaller font size */
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
@@ -73,10 +73,9 @@ nav a:hover {
   color: #fff;
 }
 
-
 /* Section Titles */
 h2 {
-  font-size: 2rem;  /* Slightly smaller font size */
+  font-size: 2rem; /* Slightly smaller font size */
   color: #9b4d97; /* Hover effect */
   text-align: center;
   margin-top: 50px; /* Reduced margin */
@@ -89,7 +88,7 @@ h2 {
 
 /* Week Section Header (H1) */
 h1 {
-  font-size: 3rem;  /* Slightly smaller font size */
+  font-size: 3rem; /* Slightly smaller font size */
   color: #fff;
   background: linear-gradient(135deg, #9b4d97, #6a3c8b);
   -webkit-background-clip: text;
@@ -112,8 +111,6 @@ h1:hover {
   color: #f2f2f2; /* Color change on hover */
 }
 
-
-
 h1 span {
   font-size: 1rem; /* Slightly smaller font size */
   color: #f2f2f2;
@@ -127,23 +124,24 @@ section {
   background-color: #F8F8FF;
   color: #333;
   border-radius: 20px;
-  padding: 20px;  /* Reduced padding */
-  margin-bottom: 30px;  /* Reduced margin */
+  padding: 20px; /* Reduced padding */
+  margin-bottom: 30px; /* Reduced margin */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  width: 90%;  /* Increased width to 90% of its parent container */
-  max-width: 1200px;  /* Optional: set a larger max width for larger screens */
+  width: 90%; /* Increased width to 90% of its parent container */
+  max-width: 1200px; /* Optional: set a larger max width for larger screens */
   margin-left: auto;
   margin-right: auto;
 }
-            
+
 section:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
+
 section h3 {
-  font-size: 1.8rem;  /* Reduced font size */
+  font-size: 1.8rem; /* Reduced font size */
   font-weight: 700;
   color: #6a4c9c;
   margin-bottom: 15px;
@@ -151,13 +149,18 @@ section h3 {
   letter-spacing: 1px;
 }
 
-
 /* List styling inside sections */
+ul {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove any default padding */
+}
+
 ul li {
-  font-size: 1rem;  /* Slightly smaller font size */
+  font-size: 1rem; /* Slightly smaller font size */
   line-height: 1.6;
   margin-bottom: 12px; /* Reduced margin */
   position: relative;
+  padding-left: 25px; /* Space for custom bullet */
 }
 
 ul li::before {
@@ -165,38 +168,11 @@ ul li::before {
   color: #6a4c9c;
   font-size: 1.3rem; /* Slightly smaller size */
   position: absolute;
-  left: -15px;
+  left: 0;
   top: 0;
 }
 
-/* Smooth Hover Transitions for Links */
-a {
-  color: #6a4c9c;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-a::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #9b4d97;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-a:hover {
-  color: #9b4d97;
-}
-
-a:hover::after {
-  transform: scaleX(1);
-}
+/* Paragraph Links */
 p a {
   display: inline-block; /* Ensures the link behaves like a block-level element */
   padding: 12px 25px; /* Adds space around the text */
@@ -246,17 +222,17 @@ footer p {
 /* Responsive Media Queries */
 @media screen and (max-width: 768px) {
   body {
-    padding: 10px 5px;  /* Further reduce padding */
+    padding: 10px 5px; /* Further reduce padding */
   }
   header {
-    padding: 20px 10px;  /* Adjust header padding */
+    padding: 20px 10px; /* Adjust header padding */
   }
   section {
-    padding: 20px;  /* Adjust section padding */
+    padding: 20px; /* Adjust section padding */
   }
   nav a {
     font-size: 1rem;
-    padding: 8px 18px;  /* Smaller padding for nav items */
+    padding: 8px 18px; /* Smaller padding for nav items */
   }
 }
 
