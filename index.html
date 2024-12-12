@@ -5,72 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amna's Internship Weekly Summary</title>
     <style>
+        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f1f1f1; /* Light gray background */
             color: #333;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #2a2a2a;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+
+        h1, h2 {
+            color: #6a0dad; /* Purple */
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        nav {
-            text-align: center;
-            background-color: #6a0dad;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
+
+        a {
+            color: #6a0dad;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2rem;
         }
-        nav a:hover {
+
+        a:hover {
             text-decoration: underline;
         }
+
+        /* Header */
+        header {
+            background-color: #6a0dad;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #3f1f6b;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #6a0dad;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
         .week-section {
-            background-color: #f9f9f9;
-            margin: 20px;
+            background-color: white;
+            margin-bottom: 30px;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
+
         .week-section h2 {
-            color: #6a0dad;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             text-align: center;
         }
+
         .week-section ul {
             font-size: 1.1rem;
             line-height: 1.8;
             padding-left: 20px;
+            list-style-type: none;
         }
+
         .week-section ul li {
             margin-bottom: 10px;
         }
+
         .tools-section {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             margin-top: 30px;
         }
+
         .tools-section img {
             height: 60px;
         }
-        .footer {
-            background-color: #2a2a2a;
+
+        /* Footer */
+        footer {
+            background-color: #6a0dad;
             color: white;
             padding: 20px 0;
             text-align: center;
             font-size: 1rem;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+
+            .content {
+                padding: 0 10px;
+            }
+
+            .week-section {
+                padding: 15px;
+            }
+
+            .tools-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tools-section img {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -90,78 +159,80 @@
     <a href="#week7">Week 7 💫</a>
 </nav>
 
-<div id="week1" class="week-section">
-    <h2>Week 1 🌸</h2>
-    <ul>
-        <li><strong>Sunday:</strong> Introduction to the team, signing the internship contract, and a tour of the National Museum.</li>
-        <li><strong>Monday:</strong> Engaged with visitors and gathered feedback via surveys.</li>
-        <li><strong>Tuesday & Wednesday:</strong> Studied Power BI, focusing on creating a “Visitor Survey Analysis” to visualize feedback data.</li>
-        <li><strong>Thursday:</strong> Created a GitHub account, recorded a vlog summarizing the week, and drafted a report using insights from Power BI analysis.</li>
-    </ul>
-    <h3>Lessons Learned:</h3>
-    <ul>
-        <li>Learned data cleaning and sorting techniques in Power BI.</li>
-        <li>Discovered how silence visualization enhances graphics interactivity.</li>
-    </ul>
-</div>
+<div class="content">
+    <div id="week1" class="week-section">
+        <h2>Week 1 🌸</h2>
+        <ul>
+            <li><strong>Sunday:</strong> Introduction to the team, signing the internship contract, and a tour of the National Museum.</li>
+            <li><strong>Monday:</strong> Engaged with visitors and gathered feedback via surveys.</li>
+            <li><strong>Tuesday & Wednesday:</strong> Studied Power BI, focusing on creating a “Visitor Survey Analysis” to visualize feedback data.</li>
+            <li><strong>Thursday:</strong> Created a GitHub account, recorded a vlog summarizing the week, and drafted a report using insights from Power BI analysis.</li>
+        </ul>
+        <h3>Lessons Learned:</h3>
+        <ul>
+            <li>Learned data cleaning and sorting techniques in Power BI.</li>
+            <li>Discovered how silence visualization enhances graphics interactivity.</li>
+        </ul>
+    </div>
 
-<div id="week2" class="week-section">
-    <h2>Week 2 🌺</h2>
-    <ul>
-        <li><strong>Sunday:</strong> Explored materials for the audio guide project and set up Ruby and Jekyll.</li>
-        <li><strong>Monday:</strong> Studied the code structure and YAML format.</li>
-        <li><strong>Tuesday:</strong> Modified the website’s design and added content.</li>
-        <li><strong>Wednesday:</strong> Explored text-to-speech tools and added audio in multiple languages.</li>
-    </ul>
-    <h3>Challenges:</h3>
-    <ul>
-        <li>Ruby framework was new and challenging.</li>
-        <li>Staying motivated with Ruby due to its perceived old-school nature.</li>
-    </ul>
-    <div class="tools-section">
-        <a href="https://github.com/your-username" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo">
-        </a>
-        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel logo">
-        <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI logo">
+    <div id="week2" class="week-section">
+        <h2>Week 2 🌺</h2>
+        <ul>
+            <li><strong>Sunday:</strong> Explored materials for the audio guide project and set up Ruby and Jekyll.</li>
+            <li><strong>Monday:</strong> Studied the code structure and YAML format.</li>
+            <li><strong>Tuesday:</strong> Modified the website’s design and added content.</li>
+            <li><strong>Wednesday:</strong> Explored text-to-speech tools and added audio in multiple languages.</li>
+        </ul>
+        <h3>Challenges:</h3>
+        <ul>
+            <li>Ruby framework was new and challenging.</li>
+            <li>Staying motivated with Ruby due to its perceived old-school nature.</li>
+        </ul>
+        <div class="tools-section">
+            <a href="https://github.com/your-username" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo">
+            </a>
+            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel logo">
+            <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI logo">
+        </div>
+    </div>
+
+    <div id="week3" class="week-section">
+        <h2>Week 3 📝</h2>
+        <ul>
+            <li>Explored Getty’s Quire for publishing an exhibition catalogue.</li>
+            <li>Tried to install Quire and Node.js, but ran into technical difficulties. Contacted support for solutions.</li>
+            <li>Visited the Arab Museum of Modern Art and experienced the exhibition “Seeing Is Believing”.</li>
+        </ul>
+    </div>
+
+    <div id="week4" class="week-section">
+        <h2>Week 4 💫</h2>
+        <ul>
+            <li>Analyzed the MoMA collection dataset using Power BI.</li>
+            <li>Struggled with visualizing artist data using a line chart; opted for a table view.</li>
+        </ul>
+        <a href="https://app.powerbi.com/groups/me/reports/85d90aa7-29fa-4188-9617-af6fa8f2fec8/f128069a26bd1f8567ff?experience=power-bi" target="_blank">Visit my Power BI Dashboard 📈</a>
+    </div>
+
+    <div id="week5" class="week-section">
+        <h2>Week 5 💫</h2>
+        <p>This week I worked on a project to explore museum collections using a digital platform that fetches data from museum APIs. I used Node.js and Express.js to create a server for fetching and displaying artwork information.</p>
+        <a href="https://drive.google.com/file/d/1q__BVynjtkcYyNxIffL4ZfUjZ0X9YncB/view?usp=drive_link" target="_blank">Click here to watch a project demo 📹</a>
+    </div>
+
+    <div id="week6" class="week-section">
+        <h2>Week 6 💫</h2>
+        <p>I attended the “Future of Museums and Museology Practices in a Changing World” conference, which covered the role of AI, machine learning, and digital transformation in museums.</p>
+    </div>
+
+    <div id="week7" class="week-section">
+        <h2>Week 7 💫</h2>
+        <p>This week I explored the concept of RFID exhibit viewers for museums, which allows visitors to access exhibit details by scanning RFID tags linked to museum data.</p>
     </div>
 </div>
 
-<div id="week3" class="week-section">
-    <h2>Week 3 📝</h2>
-    <ul>
-        <li>Explored Getty’s Quire for publishing an exhibition catalogue.</li>
-        <li>Tried to install Quire and Node.js, but ran into technical difficulties. Contacted support for solutions.</li>
-        <li>Visited the Arab Museum of Modern Art and experienced the exhibition “Seeing Is Believing”.</li>
-    </ul>
-</div>
-
-<div id="week4" class="week-section">
-    <h2>Week 4 💫</h2>
-    <ul>
-        <li>Analyzed the MoMA collection dataset using Power BI.</li>
-        <li>Struggled with visualizing artist data using a line chart; opted for a table view.</li>
-    </ul>
-    <a href="https://app.powerbi.com/groups/me/reports/85d90aa7-29fa-4188-9617-af6fa8f2fec8/f128069a26bd1f8567ff?experience=power-bi" target="_blank">Visit my Power BI Dashboard 📈</a>
-</div>
-
-<div id="week5" class="week-section">
-    <h2>Week 5 💫</h2>
-    <p>This week I worked on a project to explore museum collections using a digital platform that fetches data from museum APIs. I used Node.js and Express.js to create a server for fetching and displaying artwork information.</p>
-    <a href="https://drive.google.com/file/d/1q__BVynjtkcYyNxIffL4ZfUjZ0X9YncB/view?usp=drive_link" target="_blank">Click here to watch a project demo 📹</a>
-</div>
-
-<div id="week6" class="week-section">
-    <h2>Week 6 💫</h2>
-    <p>I attended the “Future of Museums and Museology Practices in a Changing World” conference, which covered the role of AI, machine learning, and digital transformation in museums.</p>
-</div>
-
-<div id="week7" class="week-section">
-    <h2>Week 7 💫</h2>
-    <p>This week I explored the concept of RFID exhibit viewers for museums, which allows visitors to access exhibit details by scanning RFID tags linked to museum data.</p>
-</div>
-
-<footer class="footer">
+<footer>
     <p>&copy; 2024 Amna Elsheikh. All rights reserved.</p>
 </footer>
 
