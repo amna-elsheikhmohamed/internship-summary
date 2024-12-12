@@ -197,6 +197,29 @@ a:hover {
 a:hover::after {
   transform: scaleX(1);
 }
+p a {
+  display: inline-block; /* Ensures the link behaves like a block-level element */
+  padding: 12px 25px; /* Adds space around the text */
+  background-color: #660066; /* Background color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Removes the underline */
+  font-size: 1.2rem; /* Font size */
+  font-weight: 600; /* Bold text */
+  border-radius: 30px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  text-align: center; /* Center-align the text */
+  cursor: pointer; /* Change the cursor to a pointer when hovering */
+}
+
+p a:hover {
+  background-color: #7a2a7d; /* Darker color on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+p a:active {
+  background-color: #540054; /* Even darker color when the button is pressed */
+}
 
 /* Footer */
 footer {
