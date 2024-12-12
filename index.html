@@ -5,140 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amna's Internship Weekly Summary</title>
         <style>
-/* Reset some default styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Apply a background color and set the font family */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
+  background: linear-gradient(145deg, #9b4d97, #6a3c8b); /* Smooth Gradient */
+  color: #fff;
   line-height: 1.6;
-  padding: 20px;
+  padding: 40px 15px;
+  min-height: 100vh;
+  font-size: 1.1rem;
 }
 
-/* Styling for header */
+/* Header */
 header {
   text-align: center;
-  background-color: #6a4c9c;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+header:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-/* Navigation bar */
+/* Navigation Bar */
 nav {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 nav a {
   text-decoration: none;
-  color: #6a4c9c;
+  color: #fff;
   font-size: 1.2rem;
-  margin: 0 15px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  margin: 0 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-color: #9b4d97;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  background-color: #6a4c9c;
-  color: white;
+  background-color: #7a2a7d;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Section titles */
+/* Section Titles */
 h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-top: 20px;
+  font-size: 2.4rem;
+  color: #fff;
   text-align: center;
-  font-weight: bold;
+  margin-top: 60px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #6a4c9c;
 }
 
-/* For individual days and list items */
-h3 {
-  font-size: 1.5rem;
+/* Cards Layout (for weeks and content sections) */
+section {
+  background-color: #fff;
   color: #333;
-  margin-top: 15px;
-  font-weight: bold;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
+section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6a4c9c;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* List styling inside sections */
 ul {
   list-style-type: none;
-  margin-left: 20px;
 }
 
 ul li {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  position: relative;
 }
 
-ul li ul {
-  margin-left: 20px;
-  font-style: italic;
-}
-
-/* For images in each section */
-img {
-  display: block;
-  max-width: 100%;
-  margin: 15px auto;
-  border-radius: 8px;
-}
-
-/* Week-specific content (stylizing week sections like cards) */
-section {
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* For tool logos and external links */
-h3, p a {
+ul li::before {
+  content: "•";
   color: #6a4c9c;
-  text-decoration: none;
+  font-size: 1.5rem;
+  position: absolute;
+  left: -20px;
+  top: 0;
 }
 
-h3 a, p a:hover {
-  text-decoration: underline;
-}
-
+/* Smooth Hover Transitions for Links */
 a {
   color: #6a4c9c;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #9b4d97;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 a:hover {
-  color: #4e2a7a;
-  text-decoration: underline;
+  color: #9b4d97;
 }
 
-/* Styling for footer section */
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Footer */
 footer {
-  background-color: #6a4c9c;
-  color: white;
-  padding: 15px;
+  background: #6a4c9c;
+  color: #fff;
+  padding: 30px 0;
   text-align: center;
-  border-radius: 8px;
-  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  transition: background 0.3s ease;
+}
+
+footer:hover {
+  background: #9b4d97;
 }
 
 footer p {
   font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 25px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
 
     </style>
