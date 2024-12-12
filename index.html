@@ -17,9 +17,9 @@ body {
   background: linear-gradient(145deg, #9b4d97, #6a3c8b); /* Smooth Gradient */
   color: #fff;
   line-height: 1.6;
-  padding: 30px 10px;
+  padding: 40px 15px;
   min-height: 100vh;
-  font-size: 1rem; /* Reduced font size */
+  font-size: 1.1rem;
 }
 
 /* Header */
@@ -27,40 +27,42 @@ header {
   text-align: center;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 15px;
-  padding: 20px 15px; /* Reduced padding */
-  margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 header:hover {
   background: rgba(0, 0, 0, 0.3);
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 header h1 {
-  font-size: 2.5rem; /* Reduced font size */
+  font-size: 3rem;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  transition: transform 0.3s ease;
+  transform-origin: bottom; /* Adjusted transform-origin */
 }
 
 /* Navigation Bar */
 nav {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem; /* Reduced font size */
-  margin: 0 15px; /* Reduced margin */
-  padding: 10px 20px; /* Reduced padding */
-  border-radius: 25px;
+  font-size: 1.2rem;
+  margin: 0 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
   background-color: #9b4d97;
   transition: all 0.3s ease, color 0.3s ease;
   text-transform: uppercase;
@@ -69,70 +71,142 @@ nav a {
 nav a:hover {
   background-color: #7a2a7d;
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   color: #fff; /* Smooth color transition */
 }
 
 /* Section Titles */
 h2 {
-  font-size: 2rem; /* Reduced font size */
-  color: #9b4d97;
+  font-size: 2.4rem;
+  color: #9b4d97; /* Hover effect */
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-bottom: 12px; /* Reduced padding */
-  border-bottom: 3px solid #6a4c9c;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #6a4c9c;
 }
 
 /* Cards Layout (for weeks and content sections) */
 section {
   background-color: #fff;
   color: #333;
-  border-radius: 15px;
-  padding: 30px; /* Reduced padding */
-  margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
 section:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
 section h3 {
-  font-size: 1.8rem; /* Reduced font size */
+  font-size: 2rem;
   font-weight: 700;
   color: #6a4c9c;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* List styling inside sections */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  color: #6a4c9c;
+  font-size: 1.5rem;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+/* Smooth Hover Transitions for Links */
+a {
+  color: #6a4c9c;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #9b4d97;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: #9b4d97;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Footer */
+footer {
+  background: #6a4c9c;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  transition: background 0.3s ease;
+}
+
+footer:hover {
+  background: #9b4d97;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
 /* Responsive Media Queries */
 @media screen and (max-width: 768px) {
   body {
-    padding: 15px 5px; /* Adjusted padding for small screens */
+    padding: 20px 10px;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   h2, h3 {
-    font-size: 1.5rem; /* Adjusted font size for small screens */
+    font-size: 1.8rem;
   }
 
   section {
-    padding: 20px; /* Adjusted padding for sections */
+    padding: 25px;
   }
 
   nav a {
-    font-size: 0.9rem;
-    padding: 8px 15px; /* Adjusted padding for navigation links */
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 
