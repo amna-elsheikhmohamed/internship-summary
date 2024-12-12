@@ -8,18 +8,18 @@
         /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f1f1f1; /* Light gray background */
+            background-color: #f4f4f4; /* Light gray background */
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         h1, h2 {
-            color: #6a0dad; /* Purple */
+            color: #5a2d82; /* Deep purple */
         }
 
         a {
-            color: #6a0dad;
+            color: #5a2d82;
             text-decoration: none;
         }
 
@@ -29,8 +29,8 @@
 
         /* Header */
         header {
-            background-color: #6a0dad;
-            color: white;
+            background-color: white; /* White background */
+            color: #5a2d82; /* Deep purple text color */
             padding: 40px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -39,29 +39,32 @@
         header h1 {
             font-size: 3rem;
             margin: 0;
+            font-family: 'Georgia', serif;
         }
 
         /* Navigation */
         nav {
-            background-color: #3f1f6b;
+            background-color: #3e1f56;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             color: white;
             font-size: 1.2rem;
-            margin: 0 15px;
-            padding: 10px 20px;
+            margin: 0 25px;
+            padding: 12px 25px;
             transition: background-color 0.3s ease;
+            font-family: 'Arial', sans-serif;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            background-color: #6a0dad;
-            border-radius: 5px;
+            background-color: #5a2d82;
         }
 
         /* Main Content */
@@ -83,6 +86,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             text-align: center;
+            font-family: 'Georgia', serif;
         }
 
         .week-section ul {
@@ -96,24 +100,34 @@
             margin-bottom: 10px;
         }
 
-        .tools-section {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
+        /* Art and Museum Theme */
+        .artwork-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
-        .tools-section img {
-            height: 60px;
+        .artwork-gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .artwork-gallery img {
+            max-width: 45%;
+            border-radius: 10px;
         }
 
         /* Footer */
         footer {
-            background-color: #6a0dad;
+            background-color: #5a2d82;
             color: white;
             padding: 20px 0;
             text-align: center;
             font-size: 1rem;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Media Queries for Responsiveness */
@@ -132,12 +146,13 @@
                 padding: 15px;
             }
 
-            .tools-section {
+            .artwork-gallery {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .tools-section img {
+            .artwork-gallery img {
+                max-width: 80%;
                 margin-bottom: 20px;
             }
         }
@@ -150,18 +165,18 @@
 </header>
 
 <nav>
-    <a href="#week1">Week 1 🌸</a>
-    <a href="#week2">Week 2 🌺</a>
-    <a href="#week3">Week 3 📝</a>
-    <a href="#week4">Week 4 💫</a>
-    <a href="#week5">Week 5 💫</a>
-    <a href="#week6">Week 6 💫</a>
-    <a href="#week7">Week 7 💫</a>
+    <a href="#week1">Week 1</a>
+    <a href="#week2">Week 2</a>
+    <a href="#week3">Week 3</a>
+    <a href="#week4">Week 4</a>
+    <a href="#week5">Week 5</a>
+    <a href="#week6">Week 6</a>
+    <a href="#week7">Week 7</a>
 </nav>
 
 <div class="content">
     <div id="week1" class="week-section">
-        <h2>Week 1 🌸</h2>
+        <h2>Week 1: Introduction</h2>
         <ul>
             <li><strong>Sunday:</strong> Introduction to the team, signing the internship contract, and a tour of the National Museum.</li>
             <li><strong>Monday:</strong> Engaged with visitors and gathered feedback via surveys.</li>
@@ -173,10 +188,14 @@
             <li>Learned data cleaning and sorting techniques in Power BI.</li>
             <li>Discovered how silence visualization enhances graphics interactivity.</li>
         </ul>
+        <div class="artwork-gallery">
+            <img src="https://images.unsplash.com/photo-1579834296222-c9ed947ee401" alt="Museum Artwork 1" class="artwork-image">
+            <img src="https://images.unsplash.com/photo-1534920561891-fd8d73f2f4f4" alt="Museum Artwork 2" class="artwork-image">
+        </div>
     </div>
 
     <div id="week2" class="week-section">
-        <h2>Week 2 🌺</h2>
+        <h2>Week 2: Audio Guide Project</h2>
         <ul>
             <li><strong>Sunday:</strong> Explored materials for the audio guide project and set up Ruby and Jekyll.</li>
             <li><strong>Monday:</strong> Studied the code structure and YAML format.</li>
@@ -188,17 +207,14 @@
             <li>Ruby framework was new and challenging.</li>
             <li>Staying motivated with Ruby due to its perceived old-school nature.</li>
         </ul>
-        <div class="tools-section">
-            <a href="https://github.com/your-username" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo">
-            </a>
-            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel logo">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI logo">
+        <div class="artwork-gallery">
+            <img src="https://images.unsplash.com/photo-1513702894624-e464e4f7d10d" alt="Museum Artwork 3" class="artwork-image">
+            <img src="https://images.unsplash.com/photo-1502922575379-8b71e273587b" alt="Museum Artwork 4" class="artwork-image">
         </div>
     </div>
 
     <div id="week3" class="week-section">
-        <h2>Week 3 📝</h2>
+        <h2>Week 3: Data Matching and API Integration</h2>
         <ul>
             <li>Explored Getty’s Quire for publishing an exhibition catalogue.</li>
             <li>Tried to install Quire and Node.js, but ran into technical difficulties. Contacted support for solutions.</li>
@@ -207,7 +223,7 @@
     </div>
 
     <div id="week4" class="week-section">
-        <h2>Week 4 💫</h2>
+        <h2>Week 4: Collection Data Analysis</h2>
         <ul>
             <li>Analyzed the MoMA collection dataset using Power BI.</li>
             <li>Struggled with visualizing artist data using a line chart; opted for a table view.</li>
@@ -216,18 +232,18 @@
     </div>
 
     <div id="week5" class="week-section">
-        <h2>Week 5 💫</h2>
+        <h2>Week 5: Digital Platforms and APIs</h2>
         <p>This week I worked on a project to explore museum collections using a digital platform that fetches data from museum APIs. I used Node.js and Express.js to create a server for fetching and displaying artwork information.</p>
         <a href="https://drive.google.com/file/d/1q__BVynjtkcYyNxIffL4ZfUjZ0X9YncB/view?usp=drive_link" target="_blank">Click here to watch a project demo 📹</a>
     </div>
 
     <div id="week6" class="week-section">
-        <h2>Week 6 💫</h2>
+        <h2>Week 6: Digital Transformation at Qatar Museums</h2>
         <p>I attended the “Future of Museums and Museology Practices in a Changing World” conference, which covered the role of AI, machine learning, and digital transformation in museums.</p>
     </div>
 
     <div id="week7" class="week-section">
-        <h2>Week 7 💫</h2>
+        <h2>Week 7: RFID Exhibits</h2>
         <p>This week I explored the concept of RFID exhibit viewers for museums, which allows visitors to access exhibit details by scanning RFID tags linked to museum data.</p>
     </div>
 </div>
