@@ -7,43 +7,46 @@
     <style>
  /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Font style for the entire page */
     background-color: #f1f1f1; /* Light gray background */
-    color: #333;
+    color: #333; /* Default text color */
     margin: 0;
     padding: 0;
 }
 
 h1, h2 {
-    color: #6a0dad; /* Purple */
+    color: #6a0dad; /* Purple for headers */
 }
 
 a {
-    color: #6a0dad;
-    text-decoration: none;
+    color: #6a0dad; /* Purple color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: normal; /* Default font weight for links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #ff6347; /* Change link color to a red-orange when hovered */
+    text-decoration: underline; /* Underline link on hover */
 }
 
 /* Header */
 header {
-    background-color: #6a0dad;
-    color: white;
+    background-color: #6a0dad; /* Purple background for header */
+    color: white; /* White text */
     padding: 40px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Larger text for main header */
     margin: 0;
 }
 
 /* Navigation */
 nav {
-    background-color: #3f1f6b;
+    background-color: #3f1f6b; /* Darker purple background for navigation */
     text-align: center;
     padding: 10px 0;
     position: sticky;
@@ -52,15 +55,15 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: white; /* White color for navigation links */
     font-size: 1.2rem;
     margin: 0 15px;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 nav a:hover {
-    background-color: #6a0dad;
+    background-color: #6a0dad; /* Purple background on hover */
     border-radius: 5px;
 }
 
@@ -71,12 +74,18 @@ nav a:hover {
     padding: 0 20px;
 }
 
+/* Week Section (Card Style) */
 .week-section {
     background-color: white;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Space between cards */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around the card */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.week-section:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
 }
 
 .week-section h2 {
@@ -104,12 +113,19 @@ nav a:hover {
 }
 
 .tools-section img {
-    height: 60px;
+    height: 60px; /* Set height of images */
+    width: auto; /* Maintain image aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth image scaling */
+}
+
+.tools-section img:hover {
+    transform: scale(1.1); /* Scale image slightly on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #6a0dad;
+    background-color: #6a0dad; /* Purple footer */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -118,25 +134,25 @@ footer {
 
 /* Paragraph styles */
 p {
-    font-size: 1rem;            /* Set font size */
-    line-height: 1.6;           /* Improve readability */
-    color: #333;                /* Dark text color */
-    margin-bottom: 15px;        /* Add space below paragraphs */
-    text-align: justify;        /* Justify text alignment */
+    font-size: 1rem; /* Set font size */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Dark text color */
+    margin-bottom: 15px; /* Add space below paragraphs */
+    text-align: justify; /* Justify text alignment */
 }
 
 /* For paragraph inside sections with a different background */
 .week-section p {
-    font-size: 1.1rem;          /* Slightly larger text */
-    color: #444;                /* Lighter color for better contrast */
-    line-height: 1.8;           /* A bit more line height */
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #444; /* Lighter color for better contrast */
+    line-height: 1.8; /* A bit more line height */
 }
 
 /* Paragraph with a special class */
 .special-paragraph {
-    font-style: italic;         /* Italicize text */
-    font-weight: bold;          /* Make it bold */
-    color: #6a0dad;             /* Purple color */
+    font-style: italic; /* Italicize text */
+    font-weight: bold; /* Make it bold */
+    color: #6a0dad; /* Purple color */
 }
 
 /* Media Queries for Responsiveness */
@@ -165,8 +181,8 @@ p {
     }
 
     p {
-        font-size: 0.9rem;  /* Slightly smaller text on mobile */
-        line-height: 1.4;    /* Reduced line height */
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
+        line-height: 1.4;   /* Reduced line height */
     }
 }
 
