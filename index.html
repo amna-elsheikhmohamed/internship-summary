@@ -188,6 +188,13 @@ section {
   color: #333;
 }
 
+/* Ensure full card is visible when expanded */
+details[open] section {
+  max-height: none; /* Remove height restriction */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Only transition opacity for smooth effect */
+}
+
 /* Hide section when collapsed */
 details:not([open]) section {
   max-height: 0;
@@ -196,12 +203,6 @@ details:not([open]) section {
   transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-/* Smooth transition for expanded content */
-details[open] section {
-  max-height: 500px; /* Set a suitable max height for expanded content */
-  opacity: 1;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-}
 
 /* List styling inside sections */
 ul {
