@@ -153,6 +153,55 @@ section h3 {
   align-items: center; /* Vertically center the content */
   text-align: center; /* Ensure text is centered if it wraps */
 }
+/* Style the summary */
+summary {
+  font-size: 1.5rem;
+  color: #6a4c9c;
+  cursor: pointer;
+  background: #f8f8ff;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+summary:hover {
+  background-color: #e8e8ff;
+  transform: scale(1.02);
+}
+
+/* Rotate arrow when expanded */
+details[open] summary {
+  transform: rotate(180deg);
+}
+
+/* Style the section (content) */
+section {
+  padding: 15px;
+  margin-top: 10px;
+  background: #f8f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Hide section when collapsed */
+details:not([open]) section {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Smooth transition for expanded content */
+details[open] section {
+  max-height: 500px; /* Set a suitable max height for expanded content */
+  opacity: 1;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
 
 /* List styling inside sections */
 ul {
@@ -261,7 +310,8 @@ footer p {
         <a href="#week7">Week 7</a>
 
     </nav>
-
+  <details>
+  <summary>⬇ Week 1</summary>
     <section id="week1">
      <h2>week1</h2>
     <h3><strong>Introduction & Orientation: My Internship Journey at Qatar Museums</strong></h3>
@@ -316,7 +366,9 @@ footer p {
 </p>
 
     </section>
-
+      </details>
+<details>
+  <summary>⬇ Week 2</summary>
     <section id="week2">
        
     <h2>week2</h2>
@@ -358,7 +410,9 @@ footer p {
     <p><img src="https://github.com/user-attachments/assets/166e1f31-1fc4-4309-8949-c431eaae8006" alt="Processed Image" height="200" width="auto"></p>
     </div>
 </section>
-
+  </details>
+<details>
+  <summary>⬇ Week 3</summary>
     <section id="week3">
          <h2>week3</h2>
 
@@ -388,7 +442,9 @@ footer p {
   <img src="https://github.com/user-attachments/assets/d59c9ca2-b235-4487-a437-1c1a486cb6fc" alt="Processed Image" height="200" width="auto">
 </p>
     </section>
-
+  </details>
+<details>
+  <summary>⬇ Week 4</summary>
     <section id="week4">
          <h2>week4</h2>
             <h3><strong>Project Overview: Analyzing MoMA Collection Using Power BI</strong></h3>
@@ -404,7 +460,9 @@ footer p {
 <p><a align="center" href="https://app.powerbi.com/groups/me/reports/85d90aa7-29fa-4188-9617-af6fa8f2fec8/f128069a26bd1f8567ff?experience=power-bi">Click here to visit my Dashboard 📈</a></p>
 
         </section>
-
+  </details>
+<details>
+  <summary>⬇ Week 5</summary>
     <section id="week5">
         <h2>Week 5</h2>
 <h3><strong>Project Overview: Digital Museum Collection Explorer</strong></h3>
@@ -433,6 +491,9 @@ footer p {
     Click here </a> to watch a video about the Online Collection and see how the app fetches and displays artwork data from the museums, offering a rich, interactive experience for users as they explore the collections.</p>
 
     </section>
+      </details>
+<details>
+  <summary>⬇ Week 6</summary>
             <section id="week6">
         <h2>Week 6</h2>
 
@@ -453,6 +514,9 @@ footer p {
 <p>The conference provided valuable insights into how museums are adopting new technologies to improve both internal processes and visitor experiences. It deepened my understanding of the role of digital transformation in the museum sector and inspired me to explore how I can contribute to these efforts, particularly in the digital experience field. The event left me excited to apply these insights in my future work.</p>
 
   </section>
+      </details>
+<details>
+  <summary>⬇ Week 7</summary>
          <section id="week7">
         <h2>Week 7</h2>
 
