@@ -251,7 +251,20 @@ p a:hover {
 p a:active {
   background-color: #540054; /* Even darker color when the button is pressed */
 }
-
+ /* CSS for centering the iframe using Flexbox */
+    .video-container {
+      display: flex;
+      justify-content: center;  /* Centers the iframe horizontally */
+      align-items: center;      /* Centers the iframe vertically */
+      height: 100vh;            /* Full viewport height */
+      background-color: #f4f4f4; /* Light gray background */
+    }
+    iframe {
+      border: none;             /* Remove border around iframe */
+      width: 500px;             /* Fixed width */
+      height: 300px;            /* Fixed height */
+      max-width: 100%;          /* Makes iframe responsive */
+    }
 /* Footer */
 footer {
   background: #660066;
@@ -490,8 +503,8 @@ footer p {
 <h2><strong>Project Demonstration:</strong></h2>
 <p>Get ready to explore the project in action! <a align="center" href="https://drive.google.com/file/d/1q__BVynjtkcYyNxIffL4ZfUjZ0X9YncB/view?usp=drive_link">
     Click here </a> to watch a video about the Online Collection and see how the app fetches and displays artwork data from the museums, offering a rich, interactive experience for users as they explore the collections.</p>
-<div style="text-align: center;">
-  <iframe src="https://drive.google.com/file/d/1q__BVynjtkcYyNxIffL4ZfUjZ0X9YncB/preview" width="400" height="300"  allow="autoplay"></iframe>
+  <div class="video-container">
+  <iframe src="https://drive.google.com/file/d/1q__BVynjtkcYyNxIffL4ZfUjZ0X9YncB/preview" allow="autoplay"></iframe>
 </div>
 
     </section>
@@ -565,11 +578,11 @@ footer p {
 
 <h2><strong>Project Demonstration:</strong></h2>
 <p>Get ready to see the project in action! <a align="center" href="https://drive.google.com/file/d/1bg71gsgOJR8GxIR9z8Czk3aDVjyv_eMv/view?usp=drive_link">Click here</a> to watch the video and check out the images that showcase how the RFID tag is scanned, exhibit data is instantly fetched, and the GUI displays the relevant information and images smoothly. It’s a truly interactive experience that brings the museum exhibits to life!</p>
-<div style="text-align: center;">
-             <iframe src="https://drive.google.com/file/d/1bg71gsgOJR8GxIR9z8Czk3aDVjyv_eMv/preview" width="400" height="300" allow="autoplay"></iframe>
+  <div class="video-container">
+     <iframe src="https://drive.google.com/file/d/1bg71gsgOJR8GxIR9z8Czk3aDVjyv_eMv/preview" allow="autoplay"></iframe>
+    <img src="https://github.com/user-attachments/assets/4f27460c-6ab0-4e8e-8452-28c45602b315" alt="Processed Image" align="center" height="200" width="auto">
 </div>
 
-<img src="https://github.com/user-attachments/assets/4f27460c-6ab0-4e8e-8452-28c45602b315" alt="Processed Image" align="center" height="200" width="auto">
   </section>
 
     <footer>
